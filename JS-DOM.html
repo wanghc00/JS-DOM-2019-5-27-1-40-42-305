@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JS-DOM</title>
+		<style>
+			button {
+				width: 80px;
+				height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			<label for="username">账号：</label>
+			<input type="text" id="username">
+		</p>
+		<p>
+			<label for="password">密码：</label>
+			<input type="password" id="password">
+		</p>
+		<button id="login" onclick="login()">登录</button>
+	</body>
+    <script type="text/javascript">
+        function login() {
+            var name = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (name == "123" && password == "123") {
+                alert("登录成功！");
+            } else {
+				alert("登陆失败！");
+                document.getElementById("password").value = '';
+            }
+        }
+    </script>
+</html>
